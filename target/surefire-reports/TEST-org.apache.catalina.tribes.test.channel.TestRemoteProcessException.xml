@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="1" name="org.apache.catalina.tribes.test.channel.TestRemoteProcessException" time="6.858" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2023.1.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="22.0.1+8-16"/>
+    <property name="sun.boot.library.path" value="/Users/icourt/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/icourt/project/openSourceProject/tomcat"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.script" value="Hans"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/icourt/project/openSourceProject/tomcat"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="22.0.1+8-16"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="visualgc.id" value="8370830629500"/>
+    <property name="visualvm.id" value="8370830649833"/>
+    <property name="java.io.tmpdir" value="/var/folders/9n/8l8yg6m178v_t033y6_5bqs40000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="socksProxyPort" value="1086"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/icourt/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="maven.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="66.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="14.3"/>
+    <property name="http.nonProxyHosts" value="feishu.cn|*.feishu.cn|127.0.0.1|FD00::/8|*.FD00::/8|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost|alphalawyer.cnÔºå|*.alphalawyer.cnÔºå|FE80::/64|*.FE80::/64|::1|192.168.0.0/16|*.192.168.0.0/16"/>
+    <property name="user.home" value="/Users/icourt"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="22"/>
+    <property name="user.name" value="icourt"/>
+    <property name="java.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="socksProxyHost" value="127.0.0.1"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.1.2 package"/>
+    <property name="java.home" value="/Users/icourt/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home"/>
+    <property name="apple.awt.application.name" value="Launcher"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="22.0.1"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="socksNonProxyHosts" value="feishu.cn|*.feishu.cn|127.0.0.1|FD00::/8|*.FD00::/8|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost|alphalawyer.cnÔºå|*.alphalawyer.cnÔºå|FE80::/64|*.FE80::/64|::1|192.168.0.0/16|*.192.168.0.0/16"/>
+    <property name="ftp.nonProxyHosts" value="feishu.cn|*.feishu.cn|127.0.0.1|FD00::/8|*.FD00::/8|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost|alphalawyer.cnÔºå|*.alphalawyer.cnÔºå|FE80::/64|*.FE80::/64|::1|192.168.0.0/16|*.192.168.0.0/16"/>
+  </properties>
+  <testcase classname="org.apache.catalina.tribes.test.channel.TestRemoteProcessException" name="testDataSendSYNCACK" time="6.858">
+    <failure message="Checking failure messages. expected:&lt;4956&gt; but was:&lt;9908&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Checking failure messages. expected:&lt;4956&gt; but was:&lt;9908&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.apache.catalina.tribes.test.channel.TestRemoteProcessException.testDataSendSYNCACK(TestRemoteProcessException.java:91)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>Starting SYNC_ACK
+NORMAL:48
+FAILURES:100
+TOTAL:148
+NORMAL:85
+FAILURES:200
+TOTAL:285
+NORMAL:100
+FAILURES:234
+TOTAL:334
+NORMAL:115
+FAILURES:300
+TOTAL:415
+NORMAL:169
+FAILURES:400
+TOTAL:569
+NORMAL:200
+FAILURES:444
+TOTAL:644
+NORMAL:231
+FAILURES:500
+TOTAL:731
+NORMAL:297
+FAILURES:600
+TOTAL:897
+NORMAL:300
+FAILURES:600
+TOTAL:900
+NORMAL:344
+FAILURES:700
+TOTAL:1044
+NORMAL:384
+FAILURES:800
+TOTAL:1184
+NORMAL:400
+FAILURES:822
+TOTAL:1222
+NORMAL:440
+FAILURES:900
+TOTAL:1340
+NORMAL:482
+FAILURES:1000
+TOTAL:1482
+NORMAL:500
+FAILURES:1020
+TOTAL:1520
+NORMAL:545
+FAILURES:1100
+TOTAL:1645
+NORMAL:587
+FAILURES:1200
+TOTAL:1787
+NORMAL:600
+FAILURES:1234
+TOTAL:1834
+NORMAL:639
+FAILURES:1300
+TOTAL:1939
+NORMAL:692
+FAILURES:1400
+TOTAL:2092
+NORMAL:700
+FAILURES:1408
+TOTAL:2108
+NORMAL:751
+FAILURES:1500
+TOTAL:2251
+NORMAL:800
+FAILURES:1596
+TOTAL:2396
+NORMAL:804
+FAILURES:1600
+TOTAL:2404
+NORMAL:861
+FAILURES:1700
+TOTAL:2561
+NORMAL:893
+FAILURES:1800
+TOTAL:2693
+NORMAL:900
+FAILURES:1808
+TOTAL:2708
+NORMAL:943
+FAILURES:1900
+TOTAL:2843
+NORMAL:985
+FAILURES:2000
+TOTAL:2985
+NORMAL:1000
+FAILURES:2028
+TOTAL:3028
+NORMAL:1040
+FAILURES:2100
+TOTAL:3140
+NORMAL:1095
+FAILURES:2200
+TOTAL:3295
+NORMAL:1100
+FAILURES:2204
+TOTAL:3304
+NORMAL:1150
+FAILURES:2300
+TOTAL:3450
+NORMAL:1200
+FAILURES:2360
+TOTAL:3560
+NORMAL:1220
+FAILURES:2400
+TOTAL:3620
+NORMAL:1287
+FAILURES:2500
+TOTAL:3787
+NORMAL:1300
+FAILURES:2514
+TOTAL:3814
+NORMAL:1347
+FAILURES:2600
+TOTAL:3947
+NORMAL:1400
+FAILURES:2698
+TOTAL:4098
+NORMAL:1403
+FAILURES:2700
+TOTAL:4103
+NORMAL:1450
+FAILURES:2800
+TOTAL:4250
+NORMAL:1493
+FAILURES:2900
+TOTAL:4393
+NORMAL:1500
+FAILURES:2922
+TOTAL:4422
+NORMAL:1548
+FAILURES:3000
+TOTAL:4548
+NORMAL:1600
+FAILURES:3076
+TOTAL:4676
+NORMAL:1612
+FAILURES:3100
+TOTAL:4712
+NORMAL:1660
+FAILURES:3200
+TOTAL:4860
+NORMAL:1700
+FAILURES:3290
+TOTAL:4990
+NORMAL:1709
+FAILURES:3300
+TOTAL:5009
+NORMAL:1754
+FAILURES:3400
+TOTAL:5154
+NORMAL:1800
+FAILURES:3498
+TOTAL:5298
+NORMAL:1806
+FAILURES:3500
+TOTAL:5306
+NORMAL:1854
+FAILURES:3600
+TOTAL:5454
+NORMAL:1889
+FAILURES:3700
+TOTAL:5589
+NORMAL:1900
+FAILURES:3736
+TOTAL:5636
+NORMAL:1950
+FAILURES:3800
+TOTAL:5750
+NORMAL:2000
+FAILURES:3892
+TOTAL:5892
+NORMAL:2006
+FAILURES:3900
+TOTAL:5906
+NORMAL:2051
+FAILURES:4000
+TOTAL:6051
+NORMAL:2100
+FAILURES:4066
+TOTAL:6166
+NORMAL:2115
+FAILURES:4100
+TOTAL:6215
+NORMAL:2168
+FAILURES:4200
+TOTAL:6368
+NORMAL:2200
+FAILURES:4252
+TOTAL:6452
+NORMAL:2212
+FAILURES:4300
+TOTAL:6512
+NORMAL:2263
+FAILURES:4400
+TOTAL:6663
+NORMAL:2300
+FAILURES:4438
+TOTAL:6738
+NORMAL:2314
+FAILURES:4500
+TOTAL:6814
+NORMAL:2371
+FAILURES:4600
+TOTAL:6971
+NORMAL:2400
+FAILURES:4654
+TOTAL:7054
+NORMAL:2422
+FAILURES:4700
+TOTAL:7122
+NORMAL:2487
+FAILURES:4800
+TOTAL:7287
+NORMAL:2500
+FAILURES:4822
+TOTAL:7322
+NORMAL:2537
+FAILURES:4900
+TOTAL:7437
+NORMAL:2580
+FAILURES:5000
+TOTAL:7580
+NORMAL:2600
+FAILURES:5024
+TOTAL:7624
+NORMAL:2627
+FAILURES:5100
+TOTAL:7727
+NORMAL:2671
+FAILURES:5200
+TOTAL:7871
+NORMAL:2700
+FAILURES:5236
+TOTAL:7936
+NORMAL:2743
+FAILURES:5300
+TOTAL:8043
+NORMAL:2799
+FAILURES:5400
+TOTAL:8199
+NORMAL:2800
+FAILURES:5400
+TOTAL:8200
+NORMAL:2863
+FAILURES:5500
+TOTAL:8363
+NORMAL:2900
+FAILURES:5556
+TOTAL:8456
+NORMAL:2917
+FAILURES:5600
+TOTAL:8517
+NORMAL:2973
+FAILURES:5700
+TOTAL:8673
+NORMAL:3000
+FAILURES:5762
+TOTAL:8762
+NORMAL:3021
+FAILURES:5800
+TOTAL:8821
+NORMAL:3069
+FAILURES:5900
+TOTAL:8969
+NORMAL:3100
+FAILURES:5970
+TOTAL:9070
+NORMAL:3115
+FAILURES:6000
+TOTAL:9115
+NORMAL:3168
+FAILURES:6100
+TOTAL:9268
+NORMAL:3200
+FAILURES:6154
+TOTAL:9354
+NORMAL:3222
+FAILURES:6200
+TOTAL:9422
+NORMAL:3257
+FAILURES:6300
+TOTAL:9557
+NORMAL:3300
+FAILURES:6382
+TOTAL:9682
+NORMAL:3312
+FAILURES:6400
+TOTAL:9712
+NORMAL:3362
+FAILURES:6500
+TOTAL:9862
+NORMAL:3400
+FAILURES:6550
+TOTAL:9950
+NORMAL:3425
+FAILURES:6600
+TOTAL:10025
+NORMAL:3473
+FAILURES:6700
+TOTAL:10173
+NORMAL:3498
+FAILURES:6800
+TOTAL:10298
+NORMAL:3500
+FAILURES:6802
+TOTAL:10302
+NORMAL:3528
+FAILURES:6900
+TOTAL:10428
+NORMAL:3584
+FAILURES:7000
+TOTAL:10584
+NORMAL:3600
+FAILURES:7044
+TOTAL:10644
+NORMAL:3635
+FAILURES:7100
+TOTAL:10735
+NORMAL:3674
+FAILURES:7200
+TOTAL:10874
+NORMAL:3700
+FAILURES:7246
+TOTAL:10946
+NORMAL:3719
+FAILURES:7300
+TOTAL:11019
+NORMAL:3768
+FAILURES:7400
+TOTAL:11168
+NORMAL:3800
+FAILURES:7450
+TOTAL:11250
+NORMAL:3833
+FAILURES:7500
+TOTAL:11333
+NORMAL:3881
+FAILURES:7600
+TOTAL:11481
+NORMAL:3900
+FAILURES:7650
+TOTAL:11550
+NORMAL:3921
+FAILURES:7700
+TOTAL:11621
+NORMAL:3973
+FAILURES:7800
+TOTAL:11773
+NORMAL:4000
+FAILURES:7874
+TOTAL:11874
+NORMAL:4007
+FAILURES:7900
+TOTAL:11907
+NORMAL:4052
+FAILURES:8000
+TOTAL:12052
+NORMAL:4100
+FAILURES:8090
+TOTAL:12190
+NORMAL:4103
+FAILURES:8100
+TOTAL:12203
+NORMAL:4139
+FAILURES:8200
+TOTAL:12339
+NORMAL:4188
+FAILURES:8300
+TOTAL:12488
+NORMAL:4200
+FAILURES:8334
+TOTAL:12534
+NORMAL:4234
+FAILURES:8400
+TOTAL:12634
+NORMAL:4283
+FAILURES:8500
+TOTAL:12783
+NORMAL:4300
+FAILURES:8542
+TOTAL:12842
+NORMAL:4331
+FAILURES:8600
+TOTAL:12931
+NORMAL:4383
+FAILURES:8700
+TOTAL:13083
+NORMAL:4400
+FAILURES:8724
+TOTAL:13124
+NORMAL:4449
+FAILURES:8800
+TOTAL:13249
+NORMAL:4493
+FAILURES:8900
+TOTAL:13393
+NORMAL:4500
+FAILURES:8904
+TOTAL:13404
+NORMAL:4550
+FAILURES:9000
+TOTAL:13550
+NORMAL:4598
+FAILURES:9100
+TOTAL:13698
+NORMAL:4600
+FAILURES:9100
+TOTAL:13700
+NORMAL:4663
+FAILURES:9200
+TOTAL:13863
+NORMAL:4700
+FAILURES:9280
+TOTAL:13980
+NORMAL:4709
+FAILURES:9300
+TOTAL:14009
+NORMAL:4754
+FAILURES:9400
+TOTAL:14154
+NORMAL:4800
+FAILURES:9468
+TOTAL:14268
+NORMAL:4824
+FAILURES:9500
+TOTAL:14324
+NORMAL:4873
+FAILURES:9600
+TOTAL:14473
+NORMAL:4900
+FAILURES:9674
+TOTAL:14574
+NORMAL:4915
+FAILURES:9700
+TOTAL:14615
+NORMAL:4969
+FAILURES:9800
+TOTAL:14769
+NORMAL:5000
+FAILURES:9826
+TOTAL:14826
+NORMAL:5045
+FAILURES:9900
+TOTAL:14945
+Finished SYNC_ACK
+</system-err>
+  </testcase>
+</testsuite>

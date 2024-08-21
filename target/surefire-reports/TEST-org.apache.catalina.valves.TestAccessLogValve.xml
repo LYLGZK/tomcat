@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="82" failures="0" name="org.apache.catalina.valves.TestAccessLogValve" time="0.375" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2023.1.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="22.0.1+8-16"/>
+    <property name="sun.boot.library.path" value="/Users/icourt/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/icourt/project/openSourceProject/tomcat"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.script" value="Hans"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/icourt/project/openSourceProject/tomcat"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="22.0.1+8-16"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="visualgc.id" value="8370830629500"/>
+    <property name="visualvm.id" value="8370830649833"/>
+    <property name="java.io.tmpdir" value="/var/folders/9n/8l8yg6m178v_t033y6_5bqs40000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="socksProxyPort" value="1086"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/icourt/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="maven.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="66.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="14.3"/>
+    <property name="http.nonProxyHosts" value="feishu.cn|*.feishu.cn|127.0.0.1|FD00::/8|*.FD00::/8|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost|alphalawyer.cnÔºå|*.alphalawyer.cnÔºå|FE80::/64|*.FE80::/64|::1|192.168.0.0/16|*.192.168.0.0/16"/>
+    <property name="user.home" value="/Users/icourt"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="22"/>
+    <property name="user.name" value="icourt"/>
+    <property name="java.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="socksProxyHost" value="127.0.0.1"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.1.2 package"/>
+    <property name="java.home" value="/Users/icourt/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home"/>
+    <property name="apple.awt.application.name" value="Launcher"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="22.0.1"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="socksNonProxyHosts" value="feishu.cn|*.feishu.cn|127.0.0.1|FD00::/8|*.FD00::/8|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost|alphalawyer.cnÔºå|*.alphalawyer.cnÔºå|FE80::/64|*.FE80::/64|::1|192.168.0.0/16|*.192.168.0.0/16"/>
+    <property name="ftp.nonProxyHosts" value="feishu.cn|*.feishu.cn|127.0.0.1|FD00::/8|*.FD00::/8|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost|alphalawyer.cnÔºå|*.alphalawyer.cnÔºå|FE80::/64|*.FE80::/64|::1|192.168.0.0/16|*.192.168.0.0/16"/>
+  </properties>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[0: Name[pct-a], Type[text]]" time="0.008"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[1: Name[pct-a], Type[json]]" time="0.008"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[2: Name[pct-A], Type[text]]" time="0.031"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[3: Name[pct-A], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[4: Name[pct-b], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[5: Name[pct-b], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[6: Name[pct-B], Type[text]]" time="0.005"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[7: Name[pct-B], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[8: Name[pct-D], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[9: Name[pct-D], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[10: Name[pct-F], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[11: Name[pct-F], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[12: Name[pct-h], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[13: Name[pct-h], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[14: Name[pct-H], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[15: Name[pct-H], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[16: Name[pct-I], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[17: Name[pct-I], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[18: Name[pct-l], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[19: Name[pct-l], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[20: Name[pct-m], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[21: Name[pct-m], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[22: Name[pct-p], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[23: Name[pct-p], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[24: Name[pct-q], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[25: Name[pct-q], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[26: Name[pct-r], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[27: Name[pct-r], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[28: Name[pct-s], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[29: Name[pct-s], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[30: Name[pct-S], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[31: Name[pct-S], Type[json]]" time="0.006"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[32: Name[pct-t], Type[text]]" time="0.008"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[33: Name[pct-t], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[34: Name[pct-T], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[35: Name[pct-T], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[36: Name[pct-u], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[37: Name[pct-u], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[38: Name[pct-U], Type[text]]" time="0.006"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[39: Name[pct-U], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[40: Name[pct-v], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[41: Name[pct-v], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[42: Name[pct-X], Type[text]]" time="0.006"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[43: Name[pct-X], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[44: Name[pct-a-remote], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[45: Name[pct-a-remote], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[46: Name[pct-a-peer], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[47: Name[pct-a-peer], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[48: Name[pct-p-local], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[49: Name[pct-p-local], Type[json]]" time="0.005"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[50: Name[pct-p-remote], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[51: Name[pct-p-remote], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[52: Name[pct-t-sec], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[53: Name[pct-t-sec], Type[json]]" time="0.005"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[54: Name[pct-t-msec], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[55: Name[pct-t-msec], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[56: Name[pct-t-msec_frac], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[57: Name[pct-t-msec_frac], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[58: Name[pct-t-begin:sec], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[59: Name[pct-t-begin:sec], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[60: Name[pct-t-end:sec], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[61: Name[pct-t-end:sec], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[62: Name[pct-t-begin:umlaut_time_S], Type[text]]" time="0.007"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[63: Name[pct-t-begin:umlaut_time_S], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[64: Name[common], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[65: Name[common], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[66: Name[combined], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[67: Name[combined], Type[json]]" time="0.005"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[68: Name[verbatim-text], Type[text]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[69: Name[verbatim-text], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[70: Name[merged-cookies], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[71: Name[merged-cookies], Type[json]]" time="0.007"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[72: Name[cookie], Type[text]]" time="0.007"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[73: Name[cookie], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[74: Name[request-header], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[75: Name[request-header], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[76: Name[response-header], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[77: Name[response-header], Type[json]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[78: Name[request-attribute], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[79: Name[request-attribute], Type[json]]" time="0.003"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[80: Name[session-attribute], Type[text]]" time="0.004"/>
+  <testcase classname="org.apache.catalina.valves.TestAccessLogValve" name="test[81: Name[session-attribute], Type[json]]" time="0.014"/>
+</testsuite>
